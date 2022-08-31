@@ -1,45 +1,69 @@
 package ifpr.pgua.eic.listatelefonica.models;
 
-public class Contato {
-    private String nome;
-    private String email;
-    private String telefone;
+public class Veiculo {
+    private String placa;
+    private String modelo;
+    private String fabricante;
+    private String cor;
     
-    public Contato(String nome, String email, String telefone) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
+    public Veiculo(String placa, String modelo, String fabricante, String cor) {
+        this.placa = placa;
+        this.modelo = modelo;
+        this.fabricante = fabricante;
+        this.cor = cor;
+    }
+
+    public String getplaca() {
+        return placa;
+    }
+
+    public void setplaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getmodelo() {
+        return modelo;
+    }
+
+    public void setmodelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getfabricante() {
+        return fabricante;
+    }
+
+    public void setfabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public String getcor() {
+        return fabricante;
+    }
+
+    public void setcor(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public String toString(){
+        return placa;
     }
 
     public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+        return null;
     }
 
     public String getTelefone() {
-        return telefone;
+        return null;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public String getEmail() {
+        return null;
+    }
+
+    public static void add(Veiculo veiculo) {
     }
 
 
-    public String toString(){
-        return nome;
-    }
-    
 
-    
 }

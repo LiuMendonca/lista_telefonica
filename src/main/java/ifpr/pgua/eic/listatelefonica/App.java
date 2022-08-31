@@ -3,7 +3,7 @@ package ifpr.pgua.eic.listatelefonica;
 import ifpr.pgua.eic.listatelefonica.controllers.JanelaCadastro;
 import ifpr.pgua.eic.listatelefonica.controllers.JanelaLista;
 import ifpr.pgua.eic.listatelefonica.controllers.JanelaPrincipal;
-import ifpr.pgua.eic.listatelefonica.models.ListaTelefonica;
+import ifpr.pgua.eic.listatelefonica.models.Estacionamento;
 import ifpr.pgua.eic.listatelefonica.utils.BaseAppNavigator;
 import ifpr.pgua.eic.listatelefonica.utils.ScreenRegistryFXML;
 import ifpr.pgua.eic.listatelefonica.utils.ScreenRegistryNoFXML;
@@ -13,13 +13,13 @@ import ifpr.pgua.eic.listatelefonica.utils.ScreenRegistryNoFXML;
  */
 public class App extends BaseAppNavigator {
 
-    private ListaTelefonica listaTelefonica;
+    private Estacionamento listaTelefonica;
 
     @Override
     public void init() throws Exception {
         super.init();
 
-        listaTelefonica = new ListaTelefonica();
+        listaTelefonica = new Estacionamento();
     }
 
     @Override

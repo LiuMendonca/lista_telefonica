@@ -1,8 +1,8 @@
 package ifpr.pgua.eic.listatelefonica.controllers;
 
 import ifpr.pgua.eic.listatelefonica.App;
-import ifpr.pgua.eic.listatelefonica.models.Contato;
-import ifpr.pgua.eic.listatelefonica.models.ListaTelefonica;
+import ifpr.pgua.eic.listatelefonica.models.Estacionamento;
+import ifpr.pgua.eic.listatelefonica.models.Veiculo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
@@ -15,25 +15,21 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 /**
- * Tela para mostar a lista de contatos.
+ * Tela para mostar a lista de Veiculos.
  */
 public class JanelaLista {
 
     private HBox root;
 
-    /*Componente utilizado para mostra o conteúdo de uma lista (ArrayList). Precisa
-     * especificar qual tipo de objeto será mostrado. O item da lista utiliza o toString 
-     * do objeto mostrado.
-     */
-    private ListView<Contato> ltvContatos;
-    /*Área de texto. Semelhante ao TextField, porém com várias linhas. */
+    private ListView<Veiculo> ltvVeiculos;
+    
     private TextArea taDetalhes;
 
     private Button btVoltar;
 
-    private ListaTelefonica listaTelefonica;
+    private Estacionamento listaTelefonica;
 
-    public JanelaLista(ListaTelefonica listaTelefonica){
+    public JanelaLista(Estacionamento listaTelefonica){
         this.listaTelefonica = listaTelefonica;
         inicializaComponentes();
         carregaDados();
@@ -41,11 +37,8 @@ public class JanelaLista {
 
     private void inicializaComponentes(){
         
-        ltvContatos = new ListView<>();
-        /*Cria um ação ao clicar com o mouse em um item da lista. Toda vez que for
-         * clicado executa o método mostraDetalhes. Semelhante ao onAction de um botão.
-         */
-        ltvContatos.setOnMouseClicked(this::mostraDetalhes);
+        ltvVeiculos = new ListView<>();
+        ltvVeiculos.setOnMouseClicked(this::mostraDetalhes);
         
         taDetalhes = new TextArea();
         taDetalhes.setPrefWidth(200.0);
@@ -53,11 +46,11 @@ public class JanelaLista {
         btVoltar = new Button("Voltar");
         btVoltar.setOnAction(this::voltar);
 
-        /*Utilizado para organizar parte dos componentes da tela de forma vertical. */
+
         VBox box = new VBox();
         box.setSpacing(10.0);
 
-        box.getChildren().addAll(ltvContatos,btVoltar);
+        box.getChildren().addAll(ltvVeiculos,btVoltar);
 
         root = new HBox();
         root.setSpacing(10.0);
@@ -65,25 +58,23 @@ public class JanelaLista {
         root.getChildren().addAll(box,taDetalhes);
     }
 
-    /*Método utilizado para inicializar os dados no ListView */
+
     private void carregaDados(){
-        ltvContatos.getItems().clear();
-        /*Pega a lista de contatos e coloca dentro do ListView */
-        ltvContatos.getItems().addAll(listaTelefonica.getContatos());
+        ltvVeiculos.getItems().clear();
+        ltvVeiculos.getItems().addAll(Estacionamento.getVeiculo());
     }
 
-    /*Método que será executado ao clicar em um item da lista. */
+
     private void mostraDetalhes(MouseEvent evento){
         taDetalhes.clear();
         
-        /*Pega uma referência para o contato selecionado. */
-        Contato contato = ltvContatos.getSelectionModel().getSelectedItem();
+        
+        Veiculo Veiculo = ltvVeiculos.getSelectionModel().getSelectedItem();
 
-        /*Mostra os detalhes do contato no TextArea */
-        if(contato != null){
-            taDetalhes.appendText("Nome: "+contato.getNome()+"\n");
-            taDetalhes.appendText("Telefone: "+contato.getTelefone()+"\n");    
-            taDetalhes.appendText("E-mail:"+contato.getEmail());
+        
+        if(Veiculo != null){
+            taDetalhes.appendText("Nome: "+Veiculo.getNome()+"\n");
+            taDetalhes.appendText("Telefone: "+Veiculo.getTelefone()+"\n");
         }
     }
 
