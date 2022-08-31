@@ -1,4 +1,4 @@
-package ifpr.pgua.eic.listatelefonica.models;
+package ifpr.pgua.eic.Estacionamento_Geral.models;
 
 import java.util.ArrayList;
 import java.util.List;

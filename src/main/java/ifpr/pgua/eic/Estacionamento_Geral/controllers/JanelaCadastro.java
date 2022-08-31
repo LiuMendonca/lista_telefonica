@@ -1,7 +1,7 @@
-package ifpr.pgua.eic.listatelefonica.controllers;
+package ifpr.pgua.eic.Estacionamento_Geral.controllers;
 
-import ifpr.pgua.eic.listatelefonica.App;
-import ifpr.pgua.eic.listatelefonica.models.Estacionamento;
+import ifpr.pgua.eic.Estacionamento_Geral.App;
+import ifpr.pgua.eic.Estacionamento_Geral.models.Estacionamento;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.Parent;

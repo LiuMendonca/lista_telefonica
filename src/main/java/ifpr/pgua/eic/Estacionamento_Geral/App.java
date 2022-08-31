@@ -1,12 +1,12 @@
-package ifpr.pgua.eic.listatelefonica;
+package ifpr.pgua.eic.Estacionamento_Geral;
 
-import ifpr.pgua.eic.listatelefonica.controllers.JanelaCadastro;
-import ifpr.pgua.eic.listatelefonica.controllers.JanelaLista;
-import ifpr.pgua.eic.listatelefonica.controllers.JanelaPrincipal;
-import ifpr.pgua.eic.listatelefonica.models.Estacionamento;
-import ifpr.pgua.eic.listatelefonica.utils.BaseAppNavigator;
-import ifpr.pgua.eic.listatelefonica.utils.ScreenRegistryFXML;
-import ifpr.pgua.eic.listatelefonica.utils.ScreenRegistryNoFXML;
+import ifpr.pgua.eic.Estacionamento_Geral.controllers.JanelaCadastro;
+import ifpr.pgua.eic.Estacionamento_Geral.controllers.JanelaLista;
+import ifpr.pgua.eic.Estacionamento_Geral.controllers.JanelaPrincipal;
+import ifpr.pgua.eic.Estacionamento_Geral.models.Estacionamento;
+import ifpr.pgua.eic.Estacionamento_Geral.utils.BaseAppNavigator;
+import ifpr.pgua.eic.Estacionamento_Geral.utils.ScreenRegistryFXML;
+import ifpr.pgua.eic.Estacionamento_Geral.utils.ScreenRegistryNoFXML;
 
 /**
  * JavaFX App
